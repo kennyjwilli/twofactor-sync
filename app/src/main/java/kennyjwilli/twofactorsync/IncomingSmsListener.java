@@ -35,7 +35,7 @@ public class IncomingSmsListener extends BroadcastReceiver {
                     SmsMessage msg = msgs[i];
                     //msgFrom = msg.getOriginatingAddress();
                     String msgBody = msg.getMessageBody();
-                    if (Util.hasVerificationCode(msgBody, Util.defaultMatches)) {
+                    if (Util.hasVerificationCode(msgBody, Util.codeMatchers)) {
                         String maybeCode = Util.findBestCode(msgBody);
                         if (maybeCode != null) {
                             Log.i(Util.TAG, "received code: " + maybeCode);

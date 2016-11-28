@@ -12,7 +12,7 @@ import java.util.List;
  */
 
 public class Util {
-    public static String[] defaultMatches = {"code", "pin"};
+    public static String[] codeMatchers = {"code", "pin"};
     public static int minCodeLength = 4;
     public static final String TAG = "twofactor-sync";
 
